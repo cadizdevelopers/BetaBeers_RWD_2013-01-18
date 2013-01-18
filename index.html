@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="iso-8859-1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Be Responsive My Friend</title>
+        <meta name="description" content="Web destinada a las muchas formas en las que puedes tratar el responsive web desing">
+        <!-- solicitamos amablemente no ser reescalados ni reinterpretados -->
+        <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+
+        <!-- El clásico y querido clean.css de toda la vida pero vitaminado -->
+        <link rel="stylesheet" href="css/normalize.min.css" />
+        <!-- la parte común de todas nuestras páginas -->
+        <link rel="stylesheet" href="css/prettify.css">
+        <link rel="stylesheet" href="css/main.css" />
+        
+        <!-- Alguna fuente un poco más agradable a la lectura -->
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Unica+One&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">Tu navegador es <strong>de la edad de piedra</strong> :). Hazte un favor y <a href="http://browsehappy.com/">actualiza tu navegador</a> o bien <a href="http://www.google.com/chromeframe/?redirect=true">activa un frame de Google Chrome</a> para mejorar tu experiencia con internet.</p>
+        <![endif]-->
+        <!-- begin html -->
+        <div id="left">
+            <div class="menu">
+            <h2>Contenidos</h2>
+                <ul class="cube">
+                    <li><a href="#beginning" class="smooth">Bienvenidos</a></li>
+                    <li><a href="#chapter2" class="smooth">¿Qué es el RWD?</a></li>
+                    <li><a href="#chapter3" class="smooth">Las tres partes del RWD</a></li>
+                    <li><a href="#chapter4" class="smooth">Grid flexible</a></li>
+                    <li><a href="#chapter5" class="smooth">Medios flexibles</a></li>
+                    <li><a href="#chapter6" class="smooth">Media Queries</a></li>
+                    <li><a href="#chapter7" class="smooth">Consejos generales</a></li>
+                    <li><a href="#chapter8" class="smooth">Imágenes mucho más que flexibles</a></li>
+                    <li><a href="#chapter9" class="smooth">Referencias</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="right">
+            <div id="beginning"></div>
+            <div id="chapter1" class="chapter">
+                <h1>¡Bienvenidos!</h1>
+                <img src="./img/chapter1.png" />
+                <p>Suban sus bandejas y pongan sus asientos en posición vertical que vamos a despegar.</p>
+                <p>Vamos a hablar de Responsive Web Desing. ¿Por qué?</p>
+                <div>
+                    <ul class="cube">
+                        <li>Porque a día de hoy es casi una obligación dada la diversidad de dispositivos.</li>
+                        <li>Porque hacer una aplicación orientada a cada dispositivo puede ser muy caro.</li>
+                        <li>Porque en el fondo nos gusta ;)</li>
+                    </ul>
+                </div>
+                <p>Pero antes de empezar unas palabras de parte del piloto:</p>
+                <div class="data">
+                    <div id="hcard-Roberto-Martínez-Sánchez" class="vcard">
+                        <img style="float:left; margin-right:4px; width: 140px; box-shadow: none;" src="./img/rober.jpg" alt="photo of Roberto" class="photo"/>
+                        <span class="fn n">
+                            <span class="given-name">Roberto</span>
+                            <span class="additional-name">Martínez</span>
+                            <span class="family-name">Sánchez</span>
+                        </span>
+                        <div class="org">Diputación Provincial de Cádiz</div>
+                        <a class="email" href="mailto:roberto.martinezsanchez@gmail.com">roberto.martinezsanchez@gmail.com</a>
+                        <div class="adr">
+                            <span class="locality">Puerto Real</span>, <span class="region">Cádiz</span>, <span class="postal-code">11518</span>
+                            <span class="country-name">España</span>
+                        </div>
+                        <div class="tel">660096256</div>
+                        <div><span class="category">@roberto_ms2</span></div>
+                    </div>
+                    <img class="vcard vcard_qr" src="./img/qrcode.png" />
+                </div>
+            </div>
+            <div id="chapter2" class="chapter">
+                <h1>¿Qué es el Responsive Web Design?</h1>
+                <img src="./img/chapter2.png" />
+                <p>RWD: Es el nombre que damos al diseño/maquetación adaptable</p>
+                <ul class="cube">
+                    <li>Ethan Marcotte: ese tipo tan práctico que escribía en A List Apart</li>
+                    <li>No es una tecnología. Es una técnica.</li>
+                    <li>Está vinculada conceptualmente al front-end development</li>
+                    <li>Trata de evitar que limitemos nuestra visión de la web (folio)</li>
+                </ul>
+            </div>
+            <div id="chapter3" class="chapter">
+                <h1>Las tres partes del RWD</h1>
+                <img src="./img/chapter2.png" />
+                <p>RWD: Un diseño adaptable tiene tres patas</p>
+                <ul class="cube">
+                    <li>Un grid flexible</li>
+                    <li>Imágenes y medios flexibles</li>
+                    <li>Media queries</li>
+                </ul>
+            </div>
+            <div id="chapter4" class="chapter">
+                <h1>Grid flexible</h1>
+                <img src="./img/chapter2.png" />
+                <p>RWD: Los grids, muy empleados en diseño y maquetación han evolucionado para facilitarnos la creación de páginas web</p>
+                <p>El grid más popular es el grid 960.</p>
+                <p>Este grid representa a la perfección el concepto de lienzo, con sus pros y sus contras.</p>
+                <p>La evolución natural de este modelo es el diseño flexible.</p>
+                <p>Para obtener un diseño flexible a partir de un grid 960</p>
+                <ul>
+                    <li>Cambiamos px por %</li>
+                    <li>Puntos y píxeles pasan a ser em (1em ~= 16px)</li>
+                    <li>Objetivo / contexto = resultado</li>
+                </ul>
+                <h2>Ejemplo grid 960</h2>
+                <div id="sample1">
+                    <div class="page">
+                        <div class="blog">
+                            <div class="main">
+                                <h1>Lorem Ipsum</h1>
+                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non porta mi. Suspendisse potenti. Nulla eros nulla, imperdiet sodales congue ac, consectetur eu urna. In porttitor quam ipsum, quis tincidunt lorem. Integer vel sapien a mi iaculis tempus. Maecenas mollis rhoncus justo sit amet pharetra. Aenean orci elit, ullamcorper eget mattis egestas, vulputate at nulla. Integer quis nisi vitae justo euismod aliquam at non ipsum. Maecenas quis sollicitudin odio. Nulla facilisi. Proin adipiscing, tellus eget mattis laoreet, libero ante vehicula dolor, at feugiat enim metus eu velit.</p>
+                                <p>Nam in sollicitudin enim. Etiam porttitor leo aliquam nunc vulputate malesuada. Suspendisse congue iaculis arcu, sit amet interdum enim rhoncus eget. Cras ac lacus quis elit dignissim feugiat eu a nisi. Aliquam sit amet rutrum velit. Nam bibendum nibh et magna pretium feugiat. Duis cursus ornare felis vitae commodo. Pellentesque ultricies ultricies nisi. Suspendisse consectetur mollis elementum. Phasellus a ligula non augue suscipit rhoncus dignissim nec arcu. Cras a felis vitae felis faucibus volutpat sit amet eu tortor. Donec in nisl sapien. Cras magna nunc, mollis sit amet vulputate id, cursus sit amet arcu. </p>
+                            </div>
+                            <div class="other">
+                                 <div>
+                                    <img style="float:left; margin-right:4px; width: 100px; box-shadow: none;" src="./img/rober.jpg" alt="photo of Roberto" class="photo"/>
+                                    <span class="fn n">
+                                        <span class="given-name">Roberto</span>
+                                        <span class="additional-name">Martínez</span>
+                                        <span class="family-name">Sánchez</span>
+                                    </span>
+                                    <div class="org">Diputación Provincial de Cádiz</div>
+                                    <a class="email" href="mailto:roberto.martinezsanchez@gmail.com">roberto.martinezsanchez@gmail.com</a>
+                                    <div class="adr">
+                                        <span class="locality">Puerto Real</span>, <span class="region">Cádiz</span>, <span class="postal-code">11518</span>
+                                        <span class="country-name">España</span>
+                                    </div>
+                                    <div class="tel">660096256</div>
+                                    <div><span class="category">@roberto_ms2</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h2>Código CSS</h2>
+                <pre class="prettyprint linenums">
+#sample1 .page {
+    border: 1px solid silver;
+    margin: 36px auto;
+    overflow: auto;
+    width: 960px;
+}
+#sample1 .blog {
+    margin: 0 auto 53px;
+    width: 900px;
+}
+#sample1 .blog .main {
+    float: left;
+    width: 566px;
+}
+#sample1 .blog .other {
+    float: right;
+    width: 331px;
+}
+                </pre>
+                <h2>Ejemplo grid 960 flexible</h2>
+                <div id="sample2">
+                    <div class="page">
+                        <div class="blog">
+                            <div class="main">
+                                <h1>Lorem Ipsum</h1>
+                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non porta mi. Suspendisse potenti. Nulla eros nulla, imperdiet sodales congue ac, consectetur eu urna. In porttitor quam ipsum, quis tincidunt lorem. Integer vel sapien a mi iaculis tempus. Maecenas mollis rhoncus justo sit amet pharetra. Aenean orci elit, ullamcorper eget mattis egestas, vulputate at nulla. Integer quis nisi vitae justo euismod aliquam at non ipsum. Maecenas quis sollicitudin odio. Nulla facilisi. Proin adipiscing, tellus eget mattis laoreet, libero ante vehicula dolor, at feugiat enim metus eu velit.</p>
+                                <p>Nam in sollicitudin enim. Etiam porttitor leo aliquam nunc vulputate malesuada. Suspendisse congue iaculis arcu, sit amet interdum enim rhoncus eget. Cras ac lacus quis elit dignissim feugiat eu a nisi. Aliquam sit amet rutrum velit. Nam bibendum nibh et magna pretium feugiat. Duis cursus ornare felis vitae commodo. Pellentesque ultricies ultricies nisi. Suspendisse consectetur mollis elementum. Phasellus a ligula non augue suscipit rhoncus dignissim nec arcu. Cras a felis vitae felis faucibus volutpat sit amet eu tortor. Donec in nisl sapien. Cras magna nunc, mollis sit amet vulputate id, cursus sit amet arcu. </p>
+                            </div>
+                            <div class="other">
+                                 <div>
+                                    <img style="float:left; margin-right:4px; width: 100px; box-shadow: none;" src="./img/rober.jpg" alt="photo of Roberto" class="photo"/>
+                                    <span class="fn n">
+                                        <span class="given-name">Roberto</span>
+                                        <span class="additional-name">Martínez</span>
+                                        <span class="family-name">Sánchez</span>
+                                    </span>
+                                    <div class="org">Diputación Provincial de Cádiz</div>
+                                    <a class="email" href="mailto:roberto.martinezsanchez@gmail.com">roberto.martinezsanchez@gmail.com</a>
+                                    <div class="adr">
+                                        <span class="locality">Puerto Real</span>, <span class="region">Cádiz</span>, <span class="postal-code">11518</span>
+                                        <span class="country-name">España</span>
+                                    </div>
+                                    <div class="tel">660096256</div>
+                                    <div><span class="category">@roberto_ms2</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h2>Código CSS</h2>
+                <pre class="prettyprint linenums">
+#sample2 .page {
+    border: 1px solid silver;
+    margin: 36px auto;
+    overflow: auto;
+    width: 90%;
+}
+#sample2 .blog {
+    margin: 0 auto 53px;
+    width: 93.75%; /* 900px / 960px */
+}
+#sample2 .blog .main {
+    float: left;
+    width: 62.8888889%; /* 566px / 900px */
+}
+#sample2 .blog .other {
+    float: right;
+    width: 36.7777778%; /* 331px / 900px */
+}
+                </pre>
+            </div>
+            <div id="chapter5" class="chapter">
+                <h1>Medios flexibles</h1>
+                <img src="./img/chapter2.png" />
+                <p>Los medios son una parte importantísima en las webs modernas.</p>
+                <p>Si aspiramos a hacer una web adaptable nuestros medios tienen también que ser adaptables</p>
+                <p>Por suerte hay una regla que nos permite gobernar a todos los medios</p>
+                <pre class="prettyprint linenums">
+img,
+embed,
+object,
+video {
+    max-width: 100%;
+}
+                </pre>
+                <p>Pero no solo de max-width viven las imágenes, el overflow puede ser también nuestro aliado</p>
+                <p>Solo tienes que cambiar esto</p>
+                <pre class="prettyprint linenums">
+.feature img {
+    max-width: 100%;
+}                   
+                </pre>
+                <p>Por esto</p>
+                <pre class="prettyprint linenums">
+.feature {
+    overflow: hidden;
+}
+.feature img {
+    display: block;
+    max-width: auto;
+}
+                </pre>
+                <p>Las imágenes en todo caso suelen ser bastante "pacíficas". Hay enemigos peores.</p>
+                <p>En el caso de los vídeos, esta regla es eficaz... pero puede no ser suficiente.</p>
+                <object width="560" height="315"><param name="movie" value="http://www.youtube.com/v/eVVXNDv8rY0?hl=es_ES&amp;version=3"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/eVVXNDv8rY0?hl=es_ES&amp;version=3" type="application/x-shockwave-flash" width="560" height="315" allowscriptaccess="always" allowfullscreen="true"></embed></object>
+                <p>Por suerte tiene remedio con un poco de html y css</p>
+                <pre class="prettyprint linenums">
+.video_sample{
+    height: 0;
+    padding-bottom: 56.25%;
+    position: relative;
+    width: 100%;
+}
+                    
+.video_sample object,
+.video_sample iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+                </pre>
+                <div class="video_sample">
+                    <object><param name="movie" value="http://www.youtube.com/v/eVVXNDv8rY0?hl=es_ES&amp;version=3"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/eVVXNDv8rY0?hl=es_ES&amp;version=3" type="application/x-shockwave-flash" width="560" height="315" allowscriptaccess="always" allowfullscreen="true"></embed></object>
+                </div>
+                <p>Cuando trabajamos con fondos un poco de css3 también puede ser de ayuda</p>
+                <pre class="prettyprint linenums">
+img{
+    background-image: url(./path/to/img.jpg);
+    background-size: 100%;
+    background-repeat:no-repeat;
+}
+                </pre>
+            </div>
+            <div id="chapter6" class="chapter">
+                <h1>Media Queries</h1>
+                <p>Hasta aqui hemos avanzado mucho, pero nuestra web sigue adoleciendo de muchos problemas.</p>
+                <p>La solución a nuestros problemas se llama "media query".</p>
+                <p>Permite cambiar la hoja de estilos en función de información sensible a las características de la pantalla desde la que estamos viendo la web.</p>
+                <p>Un ejemplo sencillo de media query es el siguiente:</p>
+                <pre class="prettyprint linenums">
+@media screen and (min-width: 1024px) {
+    body {
+        font-size: 100%;
+    }
+}
+                </pre>
+                <p>Podemos incluir las media queries de infinidad de formas diferentes. Como una etiqueta link.</p>
+                <pre class="prettyprint linenums">
+link rel="stylesheet" href="wide.css" media="screen and (min-width: 1024px)"
+                </pre>
+                <p>Un import</p>
+                <pre class="prettyprint linenums">
+@import url("wide.css") screen and (min-width: 1024px);
+                </pre>
+                <p>O directamente dentro de una hoja de estilos ya existente</p>
+                <pre class="prettyprint linenums">
+@media only screen and (max-device-width: 480px) {
+    ...
+}
+                </pre>
+                <p>Un ejemplo de una query completa podría ser el siguiente:</p>
+                <pre class="prettyprint linenums">
+/* iPads (landscape) */
+@media only screen 
+    and (min-device-width : 768px) 
+    and (max-device-width : 1024px) 
+    and (orientation : landscape) {
+    /* Styles */
+}
+                </pre>
+                <p>A fin de ser completos. Lista de parámetros que puedes consultar en una media query</p>
+                <dl>
+                    <dt><strong>width</strong></dt>
+                    <dd>Ancho del display.</dd>
+                    <dt><strong>height</strong></dt>
+                    <dd>Alto del display.</dd>
+                    <dt><strong>device-width</strong></dt>
+                    <dd>Ancho del área de renderizado del dispositivo.</dd>
+                    <dt><strong>device-height</strong></dt>
+                    <dd>Alto del área de renderizado del dispositivo.</dd>
+                    <dt><strong>orientation</strong></dt>
+                    <dd>portrait o landscape</dd>
+                    <dt><strong>aspect-ratio</strong></dt>
+                    <dd>Relación de aspecto de la ventana del navegador (p.ej.)</dd>
+                    <dt><strong>device-aspect-ratio</strong></dt>
+                    <dd>Relación de aspecto del dispositivo.</dd>
+                    <dt><strong>color</strong></dt>
+                    <dd>Número de bits de color de un dispositivo. Un dispositivo de 8 bits devolvería 8, uno sin color 0.</dd>
+                    <dt><strong>color-index</strong></dt>
+                    <dd>Número de entradas de color en la tabla de lookup del dispositivo de salida. Por ejemplo @media screen and (min-color-index: 256)</dd>
+                    <dt><strong>monochrome</strong></dt>
+                    <dd>Nos permite saber el nº bits por pixel en un dispositivo monocromo.</dd>
+                    <dt><strong>resolution</strong></dt>
+                    <dd>ensidad de píxeles en el dispositivo: screen and (resolution: 72dpi) or screen and (max-resolution: 300dpi).</dd>
+                    <dt><strong>scan</strong></dt>
+                    <dd>En televisiones nos permite saber si el procesado es progressive o scan</dd>
+                    <dt><strong>grid</strong></dt>
+                    <dd>Comprueba si el dispositivo tiene un display basado en grid. Como los teléfonos con un único tamaño de fuente. </dd>
+                </dl>
+            </div>
+            <div id="chapter7" class="chapter">
+                <h1>Consejos generales</h1>
+                <p>No hay una regla exacta para definir cuándo tu web tiene que "saltar"... Pero conocer media queries de los distintos dispositivos puede ayudar.</p>
+                <p>Trata de ser límpio con tus CSS y tu HTML. Lo primero es ser semánticamente correcto.</p>
+                <p>Cuidado con las CSS de la muerte, si las media queries se solapan puede ser un caos (reitero, hay que ser ordenado).</p>
+                <p>En la medida de lo posible trabaja mediante "progressive enhancement".</p>
+                <p>El RWD es una tecnología de front end. No te embarques en mortíferas batallas de backend para resolver un problema que no es de backend.</p>
+            </div>
+            <div id="chapter8" class="chapter">
+                <h1>Imágenes mucho más que flexibles</h1>
+                <p>Las imágenes, pese a ser sencillas de lidiar, son el principal problema del RWD.</p>
+                <p>Hasta que "picture" no sea una realidad tenemos un serio problema con los tamaños de las imágenes.</p>
+                <pre class="prettyprint linenums">
+<xmp><picture alt="Angry pirate">
+    <source src="hires.png" media="min-width:800px">
+    <source src="midres.png" media="min-width:480px">
+    <source src="lores.png">
+    <!-- fallback for browsers without support -->
+    <img src="midres.png" alt="Angry pirate">
+</picture></xmp>
+                </pre>
+                <p>Llegados a este punto hay dos soluciones:</p>
+                <ul class="cube">
+                    <li>Sentase y esperar</li>
+                    <li>Recurrir a JS para atacar el problema</li>
+                </ul>
+                <p>Si recurrimos a JS tenemos que tener claro el problema a solucionar, incluir más de un src a una misma imagen.</p>
+                <p>La mejor aproximación es la siguiente:</p>
+                <pre class="prettyprint linenums">
+<xmp><img src="t.gif" data-src="real-image.jpg" data-bigger-src="real-bigger-image.jpg"></xmp>
+                </pre>
+                <p>Si os interesa esta línea de trabajo mi aproximación preferida es la de <a href="http://24ways.org/2011/adaptive-images-for-responsive-designs-again/">Jake Archibald</a></p>
+            </div>
+            <div id="chapter9" class="chapter">
+                <h1>Referencias</h1>
+                <ul>
+                    <li><a href="http://es.wikipedia.org/wiki/Mejora_progresiva">Mejora progresiva: http://es.wikipedia.org</a></li>
+                    <li><a href="http://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php">Vídeo fluido: css-tricks.com</a></li>
+                    <li><a href="http://nmsdvid.com/snippets/#">Media queries para todo: nmsdvid.com</a></li>
+                    <li><a href="http://24ways.org/2011/adaptive-images-for-responsive-designs-again/">Imágenes responsive a toda costa: 24ways.org</a></li>
+                    <li><a href="http://designmodo.com/responsive-design-examples/">50 Ejemplos de RWD: designmodo.com</a></li>
+                    <li><a href="http://designmodo.com/responsive-web-design-inspiration/">Lo que se puede conseguir con un poco de creatividad: designmodo.com</a></li>
+                    <li><a href="http://coding.smashingmagazine.com/2013/01/15/off-canvas-navigation-for-responsive-website/">Implementing Off-Canvas Navigation: coding.smashingmagazine.com</a></li>
+                </ul>                
+            </div>
+        </div>
+        <!-- end html -->
+        
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.3.min.js"><\/script>')</script>
+
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/prettify.js"></script>
+
+        <script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+
+            $(document).ready(function () {
+                prettyPrint();
+                $('a[href^="#"]').click(function (event) {
+                    var id = $(this).attr("href");
+                    var offset = 60;
+                    var target = $(id).offset().top - offset;
+                    $('html, body').animate({ scrollTop: target }, 500);
+                    event.preventDefault();
+                });
+            });
+        </script>
+    </body>
+</html>
